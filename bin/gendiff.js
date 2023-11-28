@@ -2,7 +2,7 @@
 import { Command } from 'commander';
 import * as fs from 'node:fs';
 import * as path from 'node:path';
-import { FileInfo } from '../src/utils.js';
+import { createFileInfo, genDiff } from '../src/utils.js';
 
 const gendiff = new Command();
 
@@ -16,15 +16,17 @@ gendiff
   .action((filepath1, filepath2) => {
     const filepaths = [filepath1, filepath2];
 
-    filepaths.forEach((filepath) => {
+    const fileDataArray = filepaths.map((filepath) => {
       const resolvedPath = path.resolve(process.cwd(), filepath);
+
       if (!fs.existsSync(resolvedPath)) {
-        console.log(`${resolvedPath} не существует.`);
-      } else {
-        const fileInfo = new FileInfo(resolvedPath);
-        console.log(fileInfo);
+        console.log(`${resolvedPath} does not exist.`);
+        return false;
       }
+      return createFileInfo(resolvedPath).data;
     });
+
+    console.log(genDiff(fileDataArray[0], fileDataArray[1]));
   });
 
 gendiff.parse();

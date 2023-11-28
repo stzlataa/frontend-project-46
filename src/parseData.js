@@ -1,18 +1,17 @@
 const parseData = (data, fileExtension) => {
-  let parsedData;
-
   switch (fileExtension) {
     case 'json':
       try {
-        parsedData = JSON.parse(data);
-        return { parsedData };
+        const parsedData = JSON.parse(data);
+        return parsedData;
       } catch (error) {
-        return { error: 'Ошибка при парсинге JSON данных' };
+        return { error };
       }
     case 'yaml':
-      return 'в процессе';
+      // в процессе
+      break;
     default:
-      return `${fileExtension} не поддерживается`;
+      return { error: `${fileExtension} не поддерживается` };
   }
 };
 
