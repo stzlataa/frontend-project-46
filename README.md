@@ -25,7 +25,9 @@ gendiff [options] <filepath1> <filepath2>
 ## Options
 
 -V, --version        output the version number
+
 -h, --help           output usage information
+
 -f, --format <type>  output format
 
 [![asciicast](https://asciinema.org/a/OfTDs8HiYe8TfTZd8KOLevuxB.svg)](https://asciinema.org/a/OfTDs8HiYe8TfTZd8KOLevuxB)
