@@ -4,25 +4,25 @@
 
 <a href="https://codeclimate.com/github/stzlataa/frontend-project-46/maintainability"><img src="https://api.codeclimate.com/v1/badges/5345494c3b27b9959119/maintainability" /></a>
 
-### gendiff
+## gendiff
 
 Compares two configuration files (YAML or JSON) and shows a difference.
 
-### Requirements
+## Requirements
 
 Node.js (>=13.2.0)
 
-### Installation
+## Installation
 
 ```
 npm link
 ```
 
-### Usage
+## Usage
 
 gendiff [options] <filepath1> <filepath2>
 
-## Options
+### Options
 
 -V, --version        output the version number
 
