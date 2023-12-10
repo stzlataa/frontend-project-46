@@ -9,7 +9,7 @@ const parseData = (data, fileExtension) => {
       }
     case 'yaml':
       // в процессе
-      break;
+      return undefined;
     default:
       return { error: `${fileExtension} не поддерживается` };
   }
