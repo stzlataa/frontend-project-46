@@ -1,16 +1,13 @@
-install: 
-	install-deps
+install:
+	npm ci
 
 run:
 	bin/gendiff.js
 
-install-deps:
-	npm ci
-
 test:
 	npm test
 
-fix: 
+fix:
 	npx eslint . --fix
 
 test-coverage:
