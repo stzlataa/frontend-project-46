@@ -1,23 +1,20 @@
 import yaml from 'js-yaml';
 
+const parseData = (data, parser) => {
+  try {
+    return parser(data);
+  } catch (error) {
+    return { error };
+  }
+};
+
 const parsers = (data, fileExtension) => {
-  let parsedData;
   switch (fileExtension) {
     case 'json':
-      try {
-        parsedData = JSON.parse(data);
-        return parsedData;
-      } catch (error) {
-        return { error };
-      }
+      return parseData(data, JSON.parse);
     case 'yaml':
     case 'yml':
-      try {
-        parsedData = yaml.load(data);
-        return parsedData;
-      } catch (error) {
-        return { error };
-      }
+      return parseData(data, yaml.load);
     default:
       return { error: `${fileExtension} is not supported` };
   }

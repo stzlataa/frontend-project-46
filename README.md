@@ -2,7 +2,9 @@
 
 [![Actions Status](https://github.com/stzlataa/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/stzlataa/frontend-project-46/actions)
 
-<a href="https://codeclimate.com/github/stzlataa/frontend-project-46/maintainability"><img src="https://api.codeclimate.com/v1/badges/5345494c3b27b9959119/maintainability" /></a>
+<a href="https://codeclimate.com/github/stzlataa/frontend-project-46/maintainability"><img src="https://api.codeclimate.com/v1/badges/db8146c81b8033a8a6f0/maintainability" /></a>
+
+<a href="https://codeclimate.com/github/stzlataa/frontend-project-46/test_coverage"><img src="https://api.codeclimate.com/v1/badges/db8146c81b8033a8a6f0/test_coverage" /></a>
 
 ## gendiff
 
@@ -30,4 +32,4 @@ gendiff [options] <filepath1> <filepath2>
 
 -f, --format <type>  output format
 
-[![asciicast](https://asciinema.org/a/OfTDs8HiYe8TfTZd8KOLevuxB.svg)](https://asciinema.org/a/OfTDs8HiYe8TfTZd8KOLevuxB)
+[![asciicast](https://asciinema.org/a/mlkd68F16eV2QBzD9kemhrowN.svg)](https://asciinema.org/a/mlkd68F16eV2QBzD9kemhrowN)
