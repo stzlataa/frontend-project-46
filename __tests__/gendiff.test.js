@@ -18,3 +18,9 @@ test('gendiff json', () => {
   const file2 = getFixturePath('file2.json');
   expect(processFilepaths(file1, file2)).toEqual(expectedOutput);
 });
+
+test('gendiff yaml', () => {
+  const file1 = getFixturePath('file1.yml');
+  const file2 = getFixturePath('file2.yaml');
+  expect(processFilepaths(file1, file2)).toEqual(expectedOutput);
+});
