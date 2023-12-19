@@ -7,6 +7,9 @@ run:
 test:
 	npm test
 
+test-coverage:
+	npm codeclimate
+
 fix:
 	npx eslint . --fix
 	
