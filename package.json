@@ -4,9 +4,8 @@
 	"description": "Compares two configuration files and shows a difference.",
 	"main": "/bin/",
 	"scripts": {
-		"test": "jest",
-		"coverage": "jest --coverage",
-		"codeclimate": "codeclimate-test-reporter < coverage/lcov-report/lcov.info"
+		"test": "c8 --reporter=text-summary --reporter=lcovonly node_modules/jest/bin/jest.js",
+		"codeclimate": "node_modules/.bin/jest --config=jest.config.js --ci --coverage --reporters=default --reporters=jest-reporters"
 	},
 	"author": "",
 	"license": "ISC",
@@ -17,6 +16,7 @@
 		"readline-sync": "^1.4.10"
 	},
 	"devDependencies": {
+		"c8": "^8.0.1",
 		"codeclimate-test-reporter": "^0.5.1",
 		"eslint": "^8.53.0",
 		"eslint-config-airbnb-base": "^15.0.0",
