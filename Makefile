@@ -9,6 +9,9 @@ test:
 
 fix:
 	npx eslint . --fix
+
+test-coverage:
+	npm test -- --coverage
 	
 lint:
 	npx eslint .
