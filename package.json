@@ -5,7 +5,7 @@
 	"main": "/bin/",
 	"scripts": {
 		"test": "jest && rm -rf coverage",
-		"coverage": "jest && rm -rf coverage",
+		"coverage": "jest --coverage",
 		"codeclimate": "codeclimate-test-reporter < coverage/lcov-report/lcov.info"
 	},
 	"author": "",
