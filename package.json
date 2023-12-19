@@ -5,8 +5,8 @@
 	"main": "/bin/",
 	"scripts": {
 		"test": "jest",
-		"coverage": "jest --coverage --coverageProvider=v8",
-		"codeclimate": "jest-report-action"
+		"coverage": "jest --coverage",
+		"codeclimate": "codeclimate-test-reporter < coverage/lcov-report/lcov.info"
 	},
 	"author": "",
 	"license": "ISC",
