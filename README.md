@@ -2,6 +2,8 @@
 
 [![Actions Status](https://github.com/stzlataa/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/stzlataa/frontend-project-46/actions)
 
+### Code Climate reviews:
+
 <a href="https://codeclimate.com/github/stzlataa/frontend-project-46/maintainability"><img src="https://api.codeclimate.com/v1/badges/db8146c81b8033a8a6f0/maintainability" /></a>
 
 <a href="https://codeclimate.com/github/stzlataa/frontend-project-46/test_coverage"><img src="https://api.codeclimate.com/v1/badges/db8146c81b8033a8a6f0/test_coverage" /></a>
