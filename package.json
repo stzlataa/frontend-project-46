@@ -4,7 +4,7 @@
 	"description": "Compares two configuration files and shows a difference.",
 	"main": "/bin/",
 	"scripts": {
-		"test": "jest && rm -rf coverage",
+		"test": "jest",
 		"coverage": "jest --coverage",
 		"codeclimate": "codeclimate-test-reporter < coverage/lcov-report/lcov.info"
 	},
