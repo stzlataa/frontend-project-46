@@ -7,11 +7,11 @@ run:
 test:
 	npm test
 
-test-coverage:
-	npm codeclimate
-
 fix:
 	npx eslint . --fix
+
+test-coverage:
+	npm test -- --coverage
 	
 lint:
 	npx eslint .
