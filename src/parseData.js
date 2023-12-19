@@ -11,7 +11,7 @@ const parseData = (data, fileExtension) => {
       // в процессе
       return undefined;
     default:
-      return { error: `${fileExtension} не поддерживается` };
+      return { error: `${fileExtension} is not supported` };
   }
 };
 

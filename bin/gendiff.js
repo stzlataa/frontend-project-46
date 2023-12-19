@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 import { Command } from 'commander';
-import * as fs from 'node:fs';
-import * as path from 'node:path';
-import { createFileInfo, genDiff } from '../src/utils.js';
+import { processFilepaths } from '../src/index.js';
 
 const gendiff = new Command();
 
@@ -14,19 +12,7 @@ gendiff
   .option('-f, --format <type>', 'output format')
   .arguments('<filepath1> <filepath2>')
   .action((filepath1, filepath2) => {
-    const filepaths = [filepath1, filepath2];
-
-    const fileDataArray = filepaths.map((filepath) => {
-      const resolvedPath = path.resolve(process.cwd(), filepath);
-
-      if (!fs.existsSync(resolvedPath)) {
-        console.log(`${resolvedPath} does not exist.`);
-        return false;
-      }
-      return createFileInfo(resolvedPath).data;
-    });
-
-    console.log(genDiff(fileDataArray[0], fileDataArray[1]));
+    console.log(processFilepaths(filepath1, filepath2));
   });
 
 gendiff.parse();
