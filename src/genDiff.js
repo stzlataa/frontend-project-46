@@ -2,8 +2,10 @@ import _ from 'lodash';
 import format from './formatters/index.js';
 
 const generateDiffTree = (data1, data2) => {
-  const keys = _.union(Object.keys(data1), Object.keys(data2)).sort();
-  return keys.map((key) => {
+  const keys = _.union(Object.keys(data1), Object.keys(data2));
+  const sortedKeys = _.sortBy(keys);
+
+  return sortedKeys.map((key) => {
     switch (true) {
       case !_.has(data1, key):
         return { type: 'added', key, value: data2[key] };
