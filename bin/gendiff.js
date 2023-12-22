@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { Command } from 'commander';
-import { processFilepaths } from '../src/index.js';
+import processFilepaths from '../src/processFilepaths.js';
 
 const gendiff = new Command();
 
