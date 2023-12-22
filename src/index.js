@@ -12,7 +12,7 @@ const createFileInfo = (file) => {
   return { data, extension };
 };
 
-const processFilepaths = (filepath1, filepath2) => {
+const processFilepaths = (filepath1, filepath2, format) => {
   const filepaths = [filepath1, filepath2];
 
   const fileDataArray = filepaths.map((filepath) => {
@@ -25,7 +25,7 @@ const processFilepaths = (filepath1, filepath2) => {
     return createFileInfo(resolvedPath).data;
   });
 
-  return genDiff(fileDataArray[0], fileDataArray[1]).trim();
+  return genDiff(fileDataArray[0], fileDataArray[1], format);
 };
 
 export {
