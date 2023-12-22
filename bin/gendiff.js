@@ -17,5 +17,3 @@ gendiff
   });
 
 gendiff.parse();
-
-export default gendiff;
