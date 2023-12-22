@@ -10,7 +10,7 @@ const format = (diffTree, formatType) => {
     case 'json':
       return JSON.stringify(diffTree);
     default:
-      throw new Error(`Unsupported format type: ${formatType}`);
+      return false;
   }
 };
 
