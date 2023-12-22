@@ -3,7 +3,7 @@ import _ from 'lodash';
 const stylish = (diffTree, depth = 1) => {
   const formatValue = (value, depth = 1) => {
     if (_.isObject(value)) {
-      const indentSize = 4; // Уменьшаем размер отступа
+      const indentSize = 4; 
       const indent = ' '.repeat(depth * indentSize - 2);
       return `{\n${Object.entries(value)
         .map(([k, v]) => `${indent}  ${k}: ${formatValue(v, depth + 1)}`)
