@@ -14,8 +14,8 @@ gendiff
   .action((filepath1, filepath2, options) => {
     const { format } = options;
     console.log(processFilepaths(filepath1, filepath2, format));
-  });
+  })
+  .parse(process.argv);
 
-gendiff.parse();
 
-export default gendiff;
+// export default gendiff;
