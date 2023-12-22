@@ -4,11 +4,10 @@ const plain = (diffTree, parentKey = '') => {
   const formatValue = (value) => {
     if (_.isObject(value)) {
       return '[complex value]';
-    } else if (_.isString(value)) {
+    } if (_.isString(value)) {
       return `'${value}'`;
-    } else {
-      return value;
     }
+    return value;
   };
 
   const formattedDiff = diffTree.map((node) => {
@@ -33,6 +32,5 @@ const plain = (diffTree, parentKey = '') => {
 
   return formattedDiff.filter((line) => line !== '').join('\n');
 };
-
 
 export default plain;

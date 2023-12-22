@@ -1,13 +1,13 @@
 import _ from 'lodash';
 
 const stylish = (diffTree, depth = 1) => {
-  const formatValue = (value, depth = 1) => {
+  const formatValue = (value, innerDepth = 1) => {
     if (_.isObject(value)) {
-      const indentSize = 4; 
-      const indent = ' '.repeat(depth * indentSize - 2);
+      const indentSize = 4;
+      const indent = ' '.repeat(innerDepth * indentSize - 2);
       return `{\n${Object.entries(value)
-        .map(([k, v]) => `${indent}  ${k}: ${formatValue(v, depth + 1)}`)
-        .join('\n')}\n${' '.repeat(indentSize * (depth - 1))}}`;
+        .map(([k, v]) => `${indent}  ${k}: ${formatValue(v, innerDepth + 1)}`)
+        .join('\n')}\n${' '.repeat(indentSize * (innerDepth - 1))}}`;
     }
     return value;
   };
