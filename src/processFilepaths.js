@@ -1,7 +1,7 @@
-import genDiff from './genDiff.js';
-import { createFileInfo } from './utils.js';
 import * as path from 'node:path';
 import * as fs from 'node:fs';
+import genDiff from './genDiff.js';
+import { createFileInfo } from './utils.js';
 
 const processFilepaths = (filepath1, filepath2, format) => {
   const filepaths = [filepath1, filepath2];

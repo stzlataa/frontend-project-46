@@ -12,5 +12,5 @@ const createFileInfo = (file) => {
 };
 
 export {
-  getFileExtension, createFileInfo
+  getFileExtension, createFileInfo,
 };
