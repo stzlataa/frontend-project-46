@@ -34,4 +34,4 @@ gendiff [options] <filepath1> <filepath2>
 
 -f, --format <type>  output format
 
-[![asciicast](https://asciinema.org/a/AahpWWzrBF1qu7PoYrd0C1GfC.svg)](https://asciinema.org/a/AahpWWzrBF1qu7PoYrd0C1GfC)
+[![asciicast](https://asciinema.org/a/uHN7vzpGMGmSjYBjJumZlYb8O.svg)](https://asciinema.org/a/uHN7vzpGMGmSjYBjJumZlYb8O)
